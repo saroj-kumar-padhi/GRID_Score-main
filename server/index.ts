@@ -33,6 +33,8 @@ app.use(cors({
     const defaultAllowed = new Set<string>([
       'capacitor://localhost',
       'ionic://localhost',
+      `http://localhost:${PORT}`,
+      `https://localhost:${PORT}`,
     ]);
 
     if (!origin) {

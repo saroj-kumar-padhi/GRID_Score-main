@@ -1,7 +1,8 @@
 // Central configuration file - all environment variables hardcoded here
 // Replace all placeholder values with your actual credentials
+// Default to 'development' for easy setup - set NODE_ENV=production for production builds
 
-export const NODE_ENV = 'production';
+export const NODE_ENV = (process.env.NODE_ENV as 'development' | 'production' | undefined) || 'development';
 export const PORT = 5000;
 
 // Supabase Configuration
